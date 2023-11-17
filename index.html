@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App del Clima</title>
+  <link rel="stylesheet" href="style.css">
+  <script src='app.js'></script>
+</head>
+<body>
+  <!-- Encabezado de la página -->
+  <header>
+    <h1>Clima</h1>
+    <!-- Barra de búsqueda y botones -->
+    <div class="search-container">
+      <input type="text" id="cityInput" placeholder="Ingrese la ciudad">
+      <button id="addCityButton" onclick="agregarCiudad()">Añadir Ciudad</button>
+      <button id="deleteCitiesButton" onclick="eliminarCiudades()">Eliminar Ciudades</button>
+    </div>
+  </header>
+  <!-- Contenedor de las tarjetas de clima -->
+  <div id="root" class="cards-container"></div>
+</body>
+</html>

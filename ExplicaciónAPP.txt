@@ -1,0 +1,84 @@
+Esta App nos permite obtener información climática en tiempo real para diferentes ciudades.
+
+Inicio de la Página:
+
+Al abrir la aplicación, lo primero que notamos es el encabezado "Clima" y una interfaz limpia y moderna.
+Barra de Búsqueda y Botones:
+
+En la parte superior, tenemos una barra de búsqueda donde podemos ingresar el nombre de la ciudad que nos interesa. Justo debajo, encontramos dos botones: "Añadir Ciudad" y "Eliminar Ciudades".
+
+Añadir Ciudad:
+
+Al ingresar el nombre de una ciudad y hacer clic en "Añadir Ciudad", la aplicación se conecta a una API de clima para obtener datos en tiempo real. La ciudad se agrega a la interfaz en forma de una tarjeta informativa.
+
+Eliminar Ciudades:
+
+Si queremos limpiar la interfaz y empezar de nuevo, simplemente hacemos clic en "Eliminar Ciudades". Esto borra todas las tarjetas de las ciudades añadidas.
+
+Tarjetas de Clima:
+
+Cada ciudad añadida se presenta en una tarjeta con información detallada. Podemos ver el nombre de la ciudad, la región, el país, la hora local, la temperatura actual, el estado del clima y un icono representativo.
+
+Colores Dinámicos según el Clima:
+
+Además, las tarjetas tienen colores dinámicos que reflejan el estado del clima. Soleado, nublado, con niebla, cada estado tiene su propio color de fondo, lo que facilita identificar las condiciones actuales.
+
+**CSS
+
+--Cuerpo:
+Fuente predeterminada: Arial y sans-serif.
+Margen: Eliminado.
+
+--Encabezado:
+Fondo azul claro, texto blanco.
+Alineación centrada y un relleno de 1rem.
+
+--Barra de Búsqueda y Botones:
+Diseño en línea con espacio entre elementos.
+Campo de entrada con ancho del 60%, bordes redondeados y relleno de 0.5rem.
+Botones con relleno de 0.5rem, texto blanco, bordes redondeados y colores distintivos.
+
+--Contenedor de Tarjetas:
+Cuadrícula adaptable con ancho mínimo de 300px.
+Espacio entre tarjetas, relleno y margen externo para mayor claridad.
+
+--Tarjeta de Clima:
+Diseño uniforme con bordes redondeados y sombra sutil.
+Fondo blanco y relleno interno de 1rem.
+Ícono meteorológico posicionado en la esquina superior derecha.
+
+--Texto de Tarjeta:
+Encabezados y texto con tamaños de fuente específicos y colores definidos.
+
+--Imágenes de Tarjeta:
+Tamaño fijo de 50x50px.
+
+**JS
+
+--Función agregarCiudad:
+
+Esta función se encarga de agregar una ciudad a la interfaz.
+Obtiene el valor del campo de entrada para la ciudad.
+Verifica si se proporcionó una ciudad válida (no está vacía).
+Llama a la función clima para obtener datos y mostrar la tarjeta de la ciudad.
+Limpia el campo de entrada después de agregar la ciudad.
+
+-- Función eliminarCiudades:
+
+Elimina todas las ciudades de la interfaz.
+Obtiene el contenedor de tarjetas y limpia su contenido.
+
+--Función clima:
+
+Función principal para obtener datos climáticos y mostrar la tarjeta de la ciudad.
+Construye la URL para la API del clima utilizando la ciudad proporcionada.
+Realiza la solicitud a la API del clima utilizando fetch.
+Convierte la respuesta a formato JSON.
+Crea dinámicamente una nueva tarjeta con la información obtenida.
+Asigna un color de fondo a la tarjeta según el estado del clima.
+Inserta la tarjeta en el contenedor de tarjetas.
+
+--Función asignarColorFondo:
+
+Asigna un color de fondo a la tarjeta según el estado del clima.
+Utiliza un switch para mapear diferentes estados del clima a colores específicos.
